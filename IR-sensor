@@ -1,0 +1,14 @@
+void setup() {
+  pinMode(D1, INPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  int sensor = digitalRead(D1);
+  if(sensor) {
+    Serial.println("Detected");
+  }
+  else {
+    Serial.println("Not Detected");
+  }
+}
